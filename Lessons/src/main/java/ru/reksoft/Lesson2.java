@@ -10,7 +10,7 @@ class Lesson2 {
 
     }
 
-      /**
+    /**
      * Нужно реализовать формулу y = √(13x + 13/x)
      * Подсказка: квадратный корень вычисляется функцией Math.sqrt()
      *
@@ -26,7 +26,6 @@ class Lesson2 {
         return f;
     }
 
-
     /**
      * Нужно привести строку с полным именем к инициалам.
      * Например, "Иванов Петр Александрович" → "И.П.А."
@@ -39,9 +38,10 @@ class Lesson2 {
      */
     static String initials(String fullName)
     {
-        String initial = fullName.split(" ")[0].charAt(0) + "." +
-                fullName.split(" ")[1].charAt(0)+ "."
-                + fullName.split(" ")[2].charAt(0) + ".";
+        String [] initials =  fullName.split(" ");
+        String initial = initials[0].charAt(0) + "." +
+                initials[1].charAt(0)+ "." +
+                initials[2].charAt(0) + ".";
         initial = initial.toUpperCase();
         return initial;
     }
