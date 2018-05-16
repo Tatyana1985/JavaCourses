@@ -1,12 +1,11 @@
 package ru.reksoft;
 
-
 public class Lesson3_Operators {
 
     public static void main(String[] args) {
         String a = task1(-7, "ggjgjjhj");
         System.out.println(a);
-        boolean b = task2(100);
+        boolean b = task2(-5000);
         System.out.println(b);
     }
 
@@ -57,23 +56,18 @@ public class Lesson3_Operators {
      * <p>
      * Подсказка: тут все просто, думайте сами ;)
      */
+
+
     public static boolean task2(int i) {
         --i;
         if (i > 100 || i < 30) {
             i = i + 1000;
-        } else if (i > 0 && i % 2 == 0) {
+        } else if (i % 2 == 0) {
             i = i - 1000;
         }
-
-        if (i < 0) {
-            return false;
-        } else {
-            return true;
-        }
+        boolean x = i >= 0;
+        return x;
         // свой код нужно писать тут
         // следующую строку можно удалять
-
     }
-
-
 }
