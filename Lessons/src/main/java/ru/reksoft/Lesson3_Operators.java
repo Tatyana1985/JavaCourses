@@ -26,9 +26,9 @@ public class Lesson3_Operators {
      */
     public static String task1(int i, String str) {
         if (i > 0) {
-            str = str + String.valueOf(i);
+            str = str + i;
         } else if (i < 0) {
-            str = String.valueOf(i) + str;
+            str = i + str;
         } else {
             str = "0";
         }
@@ -65,8 +65,8 @@ public class Lesson3_Operators {
         } else if (i % 2 == 0) {
             i = i - 1000;
         }
-        boolean x = i >= 0;
-        return x;
+        return i >= 0;
+
         // свой код нужно писать тут
         // следующую строку можно удалять
     }
