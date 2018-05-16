@@ -56,8 +56,6 @@ public class Lesson3_Operators {
      * <p>
      * Подсказка: тут все просто, думайте сами ;)
      */
-
-
     public static boolean task2(int i) {
         --i;
         if (i > 100 || i < 30) {
