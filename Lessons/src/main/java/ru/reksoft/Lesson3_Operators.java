@@ -1,6 +1,14 @@
 package ru.reksoft;
 
+
 public class Lesson3_Operators {
+
+    public static void main(String[] args) {
+        String a = task1(-7, "ggjgjjhj");
+        System.out.println(a);
+        boolean b = task2(100);
+        System.out.println(b);
+    }
 
     /**
      * В этом методе необходимо реализовать следующий алгоритм:
@@ -18,9 +26,22 @@ public class Lesson3_Operators {
      * - получить первые n символов из строки можно методом .substring(0, n)
      */
     public static String task1(int i, String str) {
+        if (i > 0) {
+            str = str + String.valueOf(i);
+        } else if (i < 0) {
+            str = String.valueOf(i) + str;
+        } else {
+            str = "0";
+        }
+        if (str.length() <= 10) {
+            return str;
+        } else {
+            return str.substring(0, 10);
+        }
+
         // свой код нужно писать тут
         // следующую строку можно удалять
-        return null;
+
     }
 
     /**
@@ -37,9 +58,21 @@ public class Lesson3_Operators {
      * Подсказка: тут все просто, думайте сами ;)
      */
     public static boolean task2(int i) {
+        --i;
+        if (i > 100 || i < 30) {
+            i = i + 1000;
+        } else if (i > 0 && i % 2 == 0) {
+            i = i - 1000;
+        }
+
+        if (i < 0) {
+            return false;
+        } else {
+            return true;
+        }
         // свой код нужно писать тут
         // следующую строку можно удалять
-        return false;
+
     }
 
 
